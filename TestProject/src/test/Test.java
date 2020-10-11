@@ -1,6 +1,7 @@
 package test;
 
 import inheritance.Car;
+import inheritance.Passenger;
 import inheritance.Vehicle;
 
 public class Test {
@@ -14,14 +15,17 @@ public class Test {
 		System.out.println(genericVehicle.make);
 		System.out.println(bmw.make);
 		
-		genericVehicle.start();
-		bmw.start();
+		//genericVehicle.start();
+		//bmw.start();
 		
 		genericVehicle.getVehicle(); //calls getVehicle of Vehicle
 		bmw.getVehicle();			 //calls getVehicle of Car
 		
 		genericVehicle = bmw;
-		bmw = genericVehicle;
+		//bmw = genericVehicle;
+		
+		Passenger p = new Passenger("Rudi", "Tester", "23.10.2020");
+		p.printInfo();
 		
 	}
 

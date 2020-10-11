@@ -11,9 +11,9 @@ public class Vehicle {
 		this.make = make;
 		this.model = model;
 	}
-	public boolean start() {...}
-	public boolean stop() {...}
-	public boolean move(Position p) {...}
+	//public boolean start() {...}
+	//public boolean stop() {...}
+	//public boolean move(Position p) {...}
 	
 	public Vehicle getVehicle() {
 		return this;
