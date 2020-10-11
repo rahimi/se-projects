@@ -1,6 +1,6 @@
 package inheritance;
 
-public abstract class Person {
+public abstract class Person implements Biped{
 	public String firstName;
 	public String lastName;
 	public String birthDate;
@@ -11,6 +11,4 @@ public abstract class Person {
 		this.lastName = lastName;
 		this.birthDate = birthDate;
 	}
-	
-	public abstract void printInfo();
 }
