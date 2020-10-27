@@ -3,7 +3,7 @@ package patterns;
 public class BridgePattern {
 
 	public static void main(String[] args) {
-		Person me = new AndroidPerson();
+		BridgePerson me = new AndroidPerson();
 		me.callMom();
 		me = new ApplePerson();
 		me.callMom();
@@ -24,7 +24,7 @@ interface Phone {
     }
 }
 
-abstract class Person{
+abstract class BridgePerson{
 	Phone phone;
 	
 	void usePhone(Phone phone) {
@@ -33,13 +33,13 @@ abstract class Person{
 	abstract void callMom();
 }
 
-class ApplePerson extends Person {
+class ApplePerson extends BridgePerson {
 	public ApplePerson() {
 		phone = Phone.apple();
 	}
 	void callMom() {phone.call("MOM");}
 }
-class AndroidPerson extends Person {
+class AndroidPerson extends BridgePerson {
 	public AndroidPerson() {
 		phone = Phone.android();
 	}
