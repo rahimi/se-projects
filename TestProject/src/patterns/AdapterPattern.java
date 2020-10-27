@@ -5,7 +5,7 @@ public class AdapterPattern {
 	public static void main(String[] args) {
 		USBCharger usbCharger = new USBCharger();
 		IPhone iphone = new IPhone();
-		Android android = new Android();
+		AndroidUSB android = new AndroidUSB();
 		LightningToUSBAdapter adapter = new LightningToUSBAdapter(iphone);
 		usbCharger.charge(android);
 		usbCharger.charge(iphone);
@@ -42,7 +42,7 @@ interface Lightining extends Type{
 	void connectLightning();
 }
 
-class Android implements Rechargable<Type>, USB{
+class AndroidUSB implements Rechargable<Type>, USB{
 	public void connect() {
 		connectUSB();
 	}
