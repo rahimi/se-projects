@@ -24,14 +24,14 @@ public class InjectionTest {
     public void injectionFileTest(){
         MessageService service = context.getBean("file",MessageService.class);
         service.send("Test"+System.currentTimeMillis());
-        /*appropriate test code here*/
+
     }
 
     @Test
     public void injectionConsoleTest(){
         MessageService service = context.getBean("console",MessageService.class);
         service.send("Test");
-        /*appropriate test code here*/
+
     }
 
     @Test

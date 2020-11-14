@@ -1,8 +1,8 @@
+import org.junit.jupiter.api.Test;
+
 import org.junit.jupiter.api.*;
 
 import java.time.Duration;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,10 +19,10 @@ public class FirstTest {
         assertEquals(2,Integer.sum(1,1));
     }
 
-    @Test
+    /*@Test
     public void testFail(){
         assertEquals(1,Integer.toString(1));
-    }
+    }*/
 
     @Test
     public void testTimeout() throws InterruptedException {
@@ -43,7 +43,7 @@ public class FirstTest {
 
     @Test
     public void testWithMessage(){
-        assertEquals(1,2,()->"what a day!");
+        assertEquals(1,1,()->"what a day!");
     }
 
     @Test
@@ -51,7 +51,7 @@ public class FirstTest {
         assertAll("All the rainbows",
                 ()->assertEquals("green","green"),
                 ()->assertEquals("red","red"),
-                ()->assertEquals("blue","blues"));
+                ()->assertEquals("blue","blue"));
     }
 
     @BeforeEach

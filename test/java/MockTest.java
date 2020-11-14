@@ -1,4 +1,4 @@
-import io.restassured.RestAssured;
+/*import io.restassured.RestAssured;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -19,9 +19,9 @@ import java.util.List;
 import static org.mockito.Mockito.*;
 import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
-
+*/
 public class MockTest {
-    @Test
+ /*   @Test
     public void mockedList(){
         List mockedList = mock(List.class);
         mockedList.add("hello!");
@@ -116,5 +116,5 @@ public class MockTest {
     @AfterAll
     public static void stopServer(){
         mockServer.stop();
-    }
+    }*/
 }

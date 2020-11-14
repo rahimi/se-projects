@@ -8,12 +8,15 @@ repositories {
 sourceSets {
     main {
         java {
-            srcDirs = ['TestProject/src']
+            srcDirs = ['src']
         }
     }
     test {
         java{
-            srcDirs = ['TestProject/test']
+            srcDirs = ['test/java']
+        }
+        resources{
+            srcDirs = ['test/resources']
         }
     }
 }
@@ -24,6 +27,9 @@ dependencies {
     testImplementation 'io.rest-assured:rest-assured:4.+'
     testImplementation 'org.springframework:spring-context:5.3.1'
     testImplementation 'org.springframework:spring-test:5.3.1'
+    testImplementation 'io.cucumber:cucumber-junit:6.9+'
+    testImplementation 'io.cucumber:cucumber-java:6.9+'
+    testImplementation 'io.cucumber:cucumber-junit-platform-engine:6.9+'
 }
 
 test {
