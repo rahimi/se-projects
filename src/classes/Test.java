@@ -1,4 +1,4 @@
-package test;
+package classes;
 
 import inheritance.Car;
 import inheritance.Passenger;

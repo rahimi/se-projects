@@ -20,6 +20,15 @@ sourceSets {
         }
     }
 }
+
+tasks.named('jar'){
+    manifest{
+        attributes(
+                'Main-Class': 'classes.Test'
+        )
+    }
+}
+
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
     testImplementation "org.mockito:mockito-core:3.+"
@@ -27,7 +36,7 @@ dependencies {
     testImplementation 'io.rest-assured:rest-assured:4.+'
     testImplementation 'org.springframework:spring-context:5.3.1'
     testImplementation 'org.springframework:spring-test:5.3.1'
-    testImplementation 'io.cucumber:cucumber-junit:6.9+'
+    
     testImplementation 'io.cucumber:cucumber-java:6.9+'
     testImplementation 'io.cucumber:cucumber-junit-platform-engine:6.9+'
 }
